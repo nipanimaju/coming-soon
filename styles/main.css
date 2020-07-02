@@ -107,7 +107,7 @@ h1,
       .container .right .mainInfo .form-subscribe .form {
         height: 40px;
         padding: 0;
-        margin-right: -4px;
+        margin-right: -6px;
         border: 1px solid black;
         border-right: none;
         padding-left: 0.5em; }
@@ -115,7 +115,7 @@ h1,
         width: 120px;
         height: 40px;
         border: 1px solid black;
-        border-left: none;
+        border-top: 2px solid black;
         border-radius: 0 25px 25px 0;
         padding: 0;
         color: white;
