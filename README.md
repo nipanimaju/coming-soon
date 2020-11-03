@@ -1,12 +1,15 @@
-# HTML 5 Responsive Coming Soon Under Construction template
+# HTML 5 Responsive Coming Soon Under Construction Template
 
 ![mockup](https://github.com/nipanimaju/coming-soon/blob/master/mockup.jpg?raw=true "mockup")
 
-Fell free to use under Creative Commons license. <br />
-All what you have to do is edit html file and js file.<br />
-In js file, in first line, you should write expecting date in format "yyyy-mm-dd"<br />
-In HTML file you can edit text and social media account links.
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?logo=paypal)](https://www.paypal.com/paypalme/nipanimaju)
 
-Everything is marked with a comments
+* Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+* Edit the HTML and JS to fit your needs.
+* The JS file contains the target date, in first line (format "yyyy-mm-dd").
+* The HTML file contains all texts and social media account links.
+* Plenty of comments included. ;)
 
-Buy me a coffe: [paypal](https://www.paypal.me/nipanimaju)
+
+Buy me a coffee: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?logo=paypal)](https://www.paypal.com/paypalme/nipanimaju)
