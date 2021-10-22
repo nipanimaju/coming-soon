@@ -19,6 +19,24 @@ body,
   width: 100vw;
 }
 
+.container {
+  height: 100% !important;
+  position: relative;
+  width: 100%;
+  max-width: none  !important;
+}
+
+.mainInfo {
+  padding-top: 1.5rem;
+  width: 100% !important;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0;
+}
+
 p:not(.slogan),
 .left,
 .icon,
@@ -29,11 +47,63 @@ h1,
   width: auto;
 }
 
+.overlay {
+  background-color: #E8BffB;
+  opacity         : 1;
+  background      : radial-gradient(circle, transparent 20%, #E8BffB 20%, #E8BffB 80%, transparent 80%, transparent),
+  radial-gradient(circle, transparent 20%, #E8BffB 20%, #E8BffB 80%, transparent 80%, transparent) 10px 10px,
+  linear-gradient(#FDEFB2 0.8px, transparent 0.8px) 0 -0.4px,
+  linear-gradient(90deg, #FDEFB2 0.8px, #E8BffB 0.8px) -0.4px 0;
+  background-size: 20px 20px,
+  20px 20px,
+  10px 10px,
+  10px 10px;
+  position: absolute;
+  top     : 0;
+  width   : 100%;
+  height  : 100%;
+}
+
 .container .row .left-wrap {
   padding-right: 0;
   padding-left: 0;
   -webkit-filter: drop-shadow(15px 0px 10px rgba(50, 50, 0, 0.5));
   filter: drop-shadow(15px 0px 10px rgba(50, 50, 0, 0.5));
+}
+
+body {
+  position: relative;
+}
+
+ol,
+ul {
+  list-style: none;
+  display   : grid;
+  grid-gap  : 1rem;
+  backdrop-filter: blur(2px);
+  background     : #ffbbbbd0;
+  padding        : 1.5rem;
+  margin         : 1rem auto 1rem auto;
+  border-radius: 4px;
+}
+
+li {
+  font-family: 'Faustina',serif;
+  display              : grid;
+  grid-template-columns: 0 1fr;
+  grid-gap             : 1.75em;
+  align-items          : start;
+  font-size            : 0.875rem;
+  line-height          : 1.25;
+      text-align: left;
+}
+
+ul li::before {
+  content  : attr(data-icon);
+  /* Make slightly larger than the li font-size
+  but smaller than the li grid-gap */
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 .container .row .left-wrap .left {
@@ -94,9 +164,11 @@ h1,
   align-items: flex-start;
 }
 
+img {
+      margin: auto;
+}
 @media screen and (max-width: 576px) {
   .container .right {
-    height: 50vh;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -116,8 +188,13 @@ h1,
 }
 
 .container .right .mainInfo h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin-left: 1em;
+  font-family: 'Dancing Script', cursive;
+}
+
+h3 {
+  font-family: 'Faustina',serif;
 }
 
 @media screen and (max-width: 576px) {
