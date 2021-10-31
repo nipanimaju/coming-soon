@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "parcel": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
   }
 }
