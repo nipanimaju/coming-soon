@@ -21,9 +21,24 @@ body {
 
 .navbar {
     padding: 10px 50px;
-    background: rgba(255, 255, 255, 0.82);
+    background     : linear-gradient(-45deg, #ffb9a3, #ffc2d9, #bde7f7, #c2fff1);
+    animation      : gradient-new 15s ease infinite;
 }
 
+
+@keyframes gradient-new {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 .navbar .navbar-brand {
@@ -108,6 +123,7 @@ body {
     background-position: top left;
     background-attachment: scroll;
     background-size: cover;
+    margin-top: 60px;
 }
 
 .section-1 .content {
@@ -1183,9 +1199,20 @@ cursive !important;
         /* transform: translatey(-50%); */
     }
 
-    .navbar {
+    /* .navbar {
         padding: 30px 20px;
         background: rgba(255, 255, 255, 0.82);
+    } */
+
+    .section-9 {
+        padding-bottom: 30px;
+        padding-top: 200px;
+    }
+    .thank-section .text-1 h1 {
+        font-size: 42px;
+    }
+    .thank-section .text-1 h4 {
+        font-size: 20px;
     }
 }
 

@@ -5,8 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <title>Raghul weds Anju</title>
     <link rel="icon" href="img/favicon.png" type="image/gif">
     </link>
@@ -32,7 +30,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -43,9 +41,9 @@
             <a class="navbar-brand wow slideInLeft" href="#">Raghul <i class="fas fa-heartbeat hvr-pulse"></i> Anju<span class="nav-logo-image"></span></a>
 
             <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -239,14 +237,14 @@
                             <h1>Reception</h1>
                             <p>To love, laughter, and happily ever after. Happily ever after begins here. And so, the adventure begins. True love is the greatest adventure. To a lifetime of adventures together.</p>
                             <ul liststyle-type-none>
-                                <li><b>Madhurabhai Sundar Rao Hall </b></li>
+                                <li><b>Madhurabhai Sundararraja Rao Thirumana Mandapam </b></li>
                                 <li>Salem Main Rd, Bharathipuram, Dharmapuri, Tamil Nadu 636702 </li>
                                 <li>Monday,17 November 2021 </li>
                                 <li>6:30pm-10:30pm</li>
                             </ul>
                             <div class="location">
                                 <img src="img/section2/map.png" />
-                                <a target="_blank" class="nav-link" href="https://goo.gl/maps/6ZKfPanZYZSsyCHE8">View Location</a>
+                                <a target="_blank" class="nav-link" href="https://goo.gl/maps/9DpdFzJF68khVuob9">View Location</a>
                             </div>
                         </div>
                     </div>
@@ -259,14 +257,14 @@
                             <h1>dinner</h1>
                             <p>We build deep and loving family relationships by doing simple things together, like family dinner and family home evening and by just having fun together...</p>
                             <ul liststyle-type-none>
-                                <li><b>Madhurabhai Sundar Rao Hall </b></li>
+                                <li><b>Madhurabhai Sundararraja Rao Thirumana Mandapam </b></li>
                                 <li>Salem Main Rd, Bharathipuram, Dharmapuri, Tamil Nadu 636702 </li>
                                 <li>Monday,17 November 2021 </li>
                                 <li>7:30pm-10:30pm</li>
                             </ul>
                             <div class="location">
                                 <img src="img/section2/map.png" />
-                                <a target="_blank" class="nav-link" href="https://goo.gl/maps/6ZKfPanZYZSsyCHE8">View Location</a>
+                                <a target="_blank" class="nav-link" href="https://goo.gl/maps/9DpdFzJF68khVuob9">View Location</a>
                             </div>
                         </div>
                     </div>
@@ -380,12 +378,12 @@
 
 
                     <!-- Form itself -->
-                    <form name=" sentMessage" id="contactForm" novalidate>
+                    <form name="submit-to-google-sheet" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-xl-6 col-md-6 col-6">
                                 <div class="control-group">
                                     <div class="controls">
-                                        <input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
+                                        <input type="text" class="form-control" placeholder="Full Name" id="name" name="name" required data-validation-required-message="Please enter your name" />
                                         <p class="help-block"></p>
                                     </div>
                                 </div>
@@ -393,14 +391,14 @@
                             <div class="col-xl-6 col-md-6 col-6">
                                 <div class="control-group">
                                     <div class="controls">
-                                        <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
+                                        <input type="email" class="form-control" placeholder="Email" id="email" name="email" required data-validation-required-message="Please enter your email" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-12 col-md-12 col-12">
                                 <div class="control-group">
                                     <div class="controls">
-                                        <textarea rows="10" cols="100" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
+                                        <textarea rows="10" cols="100" class="form-control" placeholder="Message" name="message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -573,6 +571,18 @@
 
     <!-- countdown timer-->
 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxSGMA1aubisMON5zRmzyHTpbxwX5b7T600_GoGmDmqs6pGnkFEmH1GrMehT2NXQ_mc/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            console.log(new FormData(form))
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 </body>
 
