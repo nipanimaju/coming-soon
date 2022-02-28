@@ -255,9 +255,13 @@ button,
 
 .instagram::before {
   font-family: "Font Awesome 5 Brands";
-  content: "\f09a";
+  content: "\f16d";
 }
 
+.discord::before {
+  font-family: "Font Awesome 5 Brands";
+ content:"\f392"
+}
 .github::before {
   font-family: "Font Awesome 5 Brands";
   content: "\f09b";
@@ -281,4 +285,15 @@ button,
 .linkedin::before {
   font-family: "Font Awesome 5 Brands";
   content: "\f08c";
+}
+
+.imga{
+  
+
+  border-radius: 30%;
+  position: center;
+  margin-right: 50rem;
+}
+.divs{
+  padding-right: 0rem;
 }
