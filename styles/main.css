@@ -37,7 +37,8 @@ h1,
 }
 
 .container .row .left-wrap .left {
-  background-image: url(../img/247.jpg);
+  /* background-image: url(../img/247.jpg); */
+  background-image: url(../img/bg_pattern.svg);
   background-repeat: no-repeat;
   background-position: 50% 100%;
   height: 100vh;
@@ -195,7 +196,14 @@ h1,
     -webkit-transform: translateY(-0.1em);
     transform: translateY(-0.1em);
     padding-left: 0;
+    padding-top: 20px;
   }
+
+  #heading {
+    font-size: 1.5em;   
+  }
+
+  
 }
 
 .container .right .icon-list .icon {
@@ -258,27 +266,43 @@ button,
   content: "\f16d";
 }
 
-.github::before {
-  font-family: "Font Awesome 5 Brands";
-  content: "\f09b";
-}
-
-.stackoverflow::before {
-  font-family: "Font Awesome 5 Brands";
-  content: "\f16c";
-}
-
-.youtube::before {
-  font-family: "Font Awesome 5 Brands";
-  content: "\f167";
-}
-
-.medium::before {
-  font-family: "Font Awesome 5 Brands";
-  content: "\f23a";
-}
-
 .linkedin::before {
   font-family: "Font Awesome 5 Brands";
   content: "\f08c";
+}
+
+svg {
+  position: relative;
+  display: block;
+  top: 50px;
+  margin: auto;
+  height: 40%;
+  width: 40%;
+}
+
+@media screen and (max-width: 576px) {
+  svg { 
+    padding-top: 100px;
+    margin-top: 100px;
+  }
+}
+
+.days {
+  color: #000;
+}
+
+.hours {
+  color: #000;
+}
+
+.minutes {
+  color: #000;
+}
+
+.seconds {
+  color: #000;
+}
+
+.small {
+  color: #000;
 }
